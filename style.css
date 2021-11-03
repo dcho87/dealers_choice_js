@@ -3,6 +3,11 @@ a {
     text-decoration: none;
 }
 
+.item {
+    font-family: sans-serif;
+    display: flex;
+}
+
 .list {
     color: red;
 }

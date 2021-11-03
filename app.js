@@ -15,14 +15,14 @@ app.get("/", (req, res) => {
     <html>
     <head>
       <title>Amazon's Best Seller 2021 </title>
-      <link rel="stylesheet" href="/style.css" />
-      <h1> Amazon's Best Seller</h1>
+      <link rel="stylesheet" href="/style.css">
+      <h1> Amazon's Best Seller 2021</h1>
     </head>
     <body>
       <div class="list">
-        <ul>
+        <ol>
         ${posts.map(post => `<li><a href="/books/${post.id}"> ${post.title}</a> by ${post.author}</li>`).join('')}
-        </ul>
+        </ol>
       </div>
     </body>
   </html>`
