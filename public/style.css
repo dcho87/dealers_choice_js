@@ -1,0 +1,42 @@
+a {
+    color: #483434;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+html {
+    background-color: #EED6C4;
+}
+
+title {
+    font-size: large;
+}
+
+img {
+    size: 500px;
+}
+
+header {
+    background-color: #CEE5D0;
+}
+
+div {
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    font-family: sans-serif;
+    justify-content: flex-start;
+}
+
+p {
+    align-items: center;
+}
+
+.list {
+    color: #6B4F4F;
+}

@@ -4,8 +4,9 @@ const app = express();
 const books = require("./books")
 const morgan = require("morgan")
 
-app.use(express.static('public'))
 app.use(morgan('dev'))
+app.use(express.static('public'))
+
 
 app.get("/", (req, res) => {
     
@@ -15,13 +16,13 @@ app.get("/", (req, res) => {
     <html>
     <head>
       <title>Amazon's Best Seller 2021 </title>
-      <link rel="stylesheet" href="/style.css">
+      <link rel="stylesheet" href="/style.css" />
       <h1> Amazon's Best Seller 2021</h1>
     </head>
     <body>
       <div class="list">
         <ol>
-        ${posts.map(post => `<li><a href="/books/${post.id}"> ${post.title}</a> by ${post.author}</li>`).join('')}
+            ${posts.map(post => `<li><a href="/books/${post.id}"> ${post.title}</a> by ${post.author}</li>`).join('')}
         </ol>
       </div>
     </body>
@@ -40,19 +41,20 @@ app.get('/books/:id', (req, res) => {
       <link rel="stylesheet" href="/style.css" />
     </head>
     <body>
+    <div>
+    <img src="/${post.id}.jpg"/>
     <div class="item">
-  <div>
-  ${post.title} <small>(by: ${post.author})</small>
-  </div>
-  <p>
-  ${post.about}
-  </p>
-  </div>
-  <div>
-  <a href="/"> Home </a>
-  </div>
-    </body>
-  </html>`);
+    ${post.title} (by: ${post.author})
+    </div>
+    <p>
+    ${post.about}
+    </p>
+    </div>
+    <div>
+    <a href="/"> Home </a>
+    </div>
+        </body>
+    </html>`);
 
 })
 
