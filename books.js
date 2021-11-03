@@ -1,0 +1,19 @@
+const books = [
+    { id: 1, title: "American Marxism", author: "Mark R. Levin", about: "Mark R. Levin, nationally syndicated talk radio host, host of LevinTV, chairman of Landmark Legal Foundation, and the host of the Fox News show Life, Liberty, & Levin, is the author of seven consecutive #1 New York Times bestsellers: Liberty and Tyranny, Ameritopia, The Liberty Amendments, Plunder and Deceit, Rediscovering Americanism, Unfreedom of the Press, and American Marxism. Liberty and Tyranny spent three months at #1 and sold more than 1.5 million copies. His books Men in Black and Rescuing Sprite were also New York Times bestsellers. Levin is an inductee of the National Radio Hall of Fame and was a top adviser to several members of President Ronald Reagan’s cabinet. He holds a BA from Temple University and a JD from Temple University Law School."},
+    { id: 2, title: "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones", author: "James Clear", about: "James Clear is a writer and speaker focused on habits, decision making, and continuous improvement. He is the author of the #1 New York Times bestseller, Atomic Habits. The book has sold over 5 million copies worldwide and has been translated into more than 50 languages. Clear is a regular speaker at Fortune 500 companies and his work has been featured in places like Time magazine, the New York Times, the Wall Street Journal and on CBS This Morning. His popular 3-2-1 email newsletter is sent out each week to more than 1 million subscribers"},
+    { id: 3, title: "The Four Agreements: A Practical Guide to Personal Freedom", author: "Don Miguel Ruiz", about: "Don Miguel Ruiz is a renowned spiritual teacher and internationally bestselling author of the “Toltec Wisdom Series,” including “The Four Agreements,” “The Mastery of Love,” “The Voice of Knowledge,” “The Four Agreements Companion Book,” “The Circle of Fire,” and “The Fifth Agreement.” The Toltec Wisdom books have sold over 12 million copies in the United States, and have been published in 46 languages worldwide."},
+    { id: 4, title: "The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma", author: "Bessel van der Kolk M.D.", about: "Bessel van der Kolk, M.D., is the founder and medical director of the Trauma Center in Brookline, Massachusetts. He is also a professor of psychiatry at Boston University School of Medicine and director of the National Complex Trauma Treatment Network. When he is not teaching around the world, Dr. van der Kolk works and lives Boston."},
+    { id: 5, title: "If Animals Kissed Good Night", author: "Ann Whitford Paul", about: "Ann Whitford Paul is the author of the bestselling If Animals series, including If Animals Kissed Good Night, which School Library Journal calls “charming”; If Animals Went to School; If Animals Celebrated Christmas; If Animals Gave Thanks; and If Animals Tried to be Kind. She lives in Los Angeles, California."},
+    { id: 6, title: "The Boy, the Mole, the Fox and the Horse", author: "Charlie Mackesy", about: "Charlie Mackesy was born during a snowy winter in Northumberland. He has been a cartoonist for The Spectator and a book illustrator for Oxford University Press. He has collaborated with Richard Curtis for Comic Relief, and Nelson Mandela on a lithograph project, “The Unity Series.” He has lived and painted in South Africa, Southern Africa and New Orleans, and co-runs a social enterprise, Mama Buci, in Zambia, which helps families of low and no income to become beekeepers. He lives in London but is often in Suffolk. Visit him at charliemackesy.com"}
+]
+
+const list = () => {
+    return [...books]
+};
+
+const find = (id) => {
+    const book = books.find(book => book.id === +id);
+    return {...book};
+}
+
+module.exports = {list: list, find: find };
